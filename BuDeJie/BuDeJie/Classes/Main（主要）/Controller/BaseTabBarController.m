@@ -7,6 +7,8 @@
 //
 #import "BaseTabBarController.h"
 
+#import "BaseTabBar.h"
+
 #import "EssenceViewController.h"
 #import "FriendTrendViewController.h"
 #import "MeViewController.h"
@@ -43,11 +45,22 @@
     
     // 2.2 设置TabBar上的按钮内容
     [self setupTitleAndButton];
+    
+    // 2.3 设置自己的tabbar
+    [self setupTabBar];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - 自定义tabbar
+- (void)setupTabBar
+{
+    BaseTabBar *tabber = [[BaseTabBar alloc] init];
+    // 由于self.tabBar 是readonly的，需要通过kvc设置
+    [self setValue:tabber forKeyPath:@"tabBar"];
 }
 
 #pragma mark - 设置所有子控制器
@@ -63,9 +76,9 @@
     UINavigationController *nav2 = [[UINavigationController alloc] initWithRootViewController:newVC];
     [self addChildViewController:nav2];
     
-    // 发布
-    PublishViewController *publishVC = [[PublishViewController alloc] init];
-    [self addChildViewController:publishVC];
+//    // 发布
+//    PublishViewController *publishVC = [[PublishViewController alloc] init];
+//    [self addChildViewController:publishVC];
     
     // 关注
     FriendTrendViewController *friendTrendVC = [[FriendTrendViewController alloc] init];
@@ -92,19 +105,19 @@
     nav2.tabBarItem.image = [UIImage imageOriginalWithName:@"tabBar_new_icon"];
     nav2.tabBarItem.selectedImage = [UIImage imageOriginalWithName:@"tabBar_new_click_icon"];
 
-    // 发布
-    PublishViewController *publishVC = self.childViewControllers[2];
-    publishVC.tabBarItem.image = [UIImage imageOriginalWithName:@"tabBar_publish_icon"];
-    publishVC.tabBarItem.selectedImage = [UIImage imageOriginalWithName:@"tabBar_publish_click_icon"];
+//    // 发布
+//    PublishViewController *publishVC = self.childViewControllers[2];
+//    publishVC.tabBarItem.image = [UIImage imageOriginalWithName:@"tabBar_publish_icon"];
+//    publishVC.tabBarItem.selectedImage = [UIImage imageOriginalWithName:@"tabBar_publish_click_icon"];
     
     // 关注
-    UINavigationController *nav4 = self.childViewControllers[3];
+    UINavigationController *nav4 = self.childViewControllers[2];
     nav4.tabBarItem.title = @"关注";
     nav4.tabBarItem.image = [UIImage imageOriginalWithName:@"tabBar_friendTrends_icon"];
     nav4.tabBarItem.selectedImage = [UIImage imageOriginalWithName:@"tabBar_friendTrends_click_icon"];
 
     // 我
-    UINavigationController *nav5 = self.childViewControllers[4];
+    UINavigationController *nav5 = self.childViewControllers[3];
     nav5.tabBarItem.title = @"我";
     nav5.tabBarItem.image = [UIImage imageOriginalWithName:@"tabBar_me_icon"];
     nav5.tabBarItem.selectedImage = [UIImage imageOriginalWithName:@"tabBar_me_click_icon"];

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E7A7CCEC1E87A3870024B1A8 /* BaseTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A7CCEB1E87A3870024B1A8 /* BaseTabBar.m */; };
 		E7D761F31E8353830085E8A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7D761F11E8353830085E8A0 /* Main.storyboard */; };
 		E7D761F51E8353830085E8A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7D761F41E8353830085E8A0 /* Assets.xcassets */; };
 		E7D761F81E8353830085E8A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7D761F61E8353830085E8A0 /* LaunchScreen.storyboard */; };
@@ -42,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E7A7CCEA1E87A3870024B1A8 /* BaseTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabBar.h; sourceTree = "<group>"; };
+		E7A7CCEB1E87A3870024B1A8 /* BaseTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabBar.m; sourceTree = "<group>"; };
 		E7D761E51E8353830085E8A0 /* BuDeJie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuDeJie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7D761F21E8353830085E8A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E7D761F41E8353830085E8A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -376,6 +379,8 @@
 		E7D762501E83BD610085E8A0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E7A7CCEA1E87A3870024B1A8 /* BaseTabBar.h */,
+				E7A7CCEB1E87A3870024B1A8 /* BaseTabBar.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -525,6 +530,7 @@
 			files = (
 				E7D762401E836E3E0085E8A0 /* EssenceViewController.m in Sources */,
 				E7D762281E8362050085E8A0 /* main.m in Sources */,
+				E7A7CCEC1E87A3870024B1A8 /* BaseTabBar.m in Sources */,
 				E7D762431E836E480085E8A0 /* FriendTrendViewController.m in Sources */,
 				E7D7624C1E836E660085E8A0 /* PublishViewController.m in Sources */,
 				E7D762561E83BEC10085E8A0 /* BaseTabBarController.m in Sources */,
