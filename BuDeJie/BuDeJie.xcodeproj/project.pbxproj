@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E7A7CCEC1E87A3870024B1A8 /* BaseTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A7CCEB1E87A3870024B1A8 /* BaseTabBar.m */; };
+		E7AE943B1E949758006C7B74 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = E7AE943A1E949758006C7B74 /* UIView+Frame.m */; };
 		E7D761F31E8353830085E8A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7D761F11E8353830085E8A0 /* Main.storyboard */; };
 		E7D761F51E8353830085E8A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7D761F41E8353830085E8A0 /* Assets.xcassets */; };
 		E7D761F81E8353830085E8A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7D761F61E8353830085E8A0 /* LaunchScreen.storyboard */; };
@@ -45,6 +46,9 @@
 /* Begin PBXFileReference section */
 		E7A7CCEA1E87A3870024B1A8 /* BaseTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabBar.h; sourceTree = "<group>"; };
 		E7A7CCEB1E87A3870024B1A8 /* BaseTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabBar.m; sourceTree = "<group>"; };
+		E7AE94391E949758006C7B74 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		E7AE943A1E949758006C7B74 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		E7AE943C1E949895006C7B74 /* BuDeJie.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BuDeJie.pch; sourceTree = "<group>"; };
 		E7D761E51E8353830085E8A0 /* BuDeJie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuDeJie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7D761F21E8353830085E8A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E7D761F41E8353830085E8A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -131,6 +135,7 @@
 				E7D761F91E8353830085E8A0 /* Info.plist */,
 				E7D7621B1E8358B00085E8A0 /* Images.xcassets */,
 				E7D761E81E8353830085E8A0 /* Supporting Files */,
+				E7AE943C1E949895006C7B74 /* BuDeJie.pch */,
 			);
 			path = BuDeJie;
 			sourceTree = "<group>";
@@ -390,6 +395,8 @@
 			children = (
 				E7D762581E83C4950085E8A0 /* UIImage+image.h */,
 				E7D762591E83C4950085E8A0 /* UIImage+image.m */,
+				E7AE94391E949758006C7B74 /* UIView+Frame.h */,
+				E7AE943A1E949758006C7B74 /* UIView+Frame.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -538,6 +545,7 @@
 				E7D762271E8362050085E8A0 /* AppDelegate.m in Sources */,
 				E7D762461E836E540085E8A0 /* MeViewController.m in Sources */,
 				E7D7625A1E83C4950085E8A0 /* UIImage+image.m in Sources */,
+				E7AE943B1E949758006C7B74 /* UIView+Frame.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -685,6 +693,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = BuDeJie/BuDeJie.pch;
 				INFOPLIST_FILE = BuDeJie/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -698,6 +707,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = BuDeJie/BuDeJie.pch;
 				INFOPLIST_FILE = BuDeJie/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

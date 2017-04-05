@@ -18,7 +18,32 @@
     [super viewDidLoad];
 
     [self.view setBackgroundColor:[UIColor redColor]];
+    
+    // 设置导航控制器
+    [self setupNavBar];
 }
+
+#pragma mark - 设置导航控制器
+- (void)setupNavBar
+{
+    // 1.leftBarButtonItem
+    UIButton *leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [leftButton setImage:[UIImage imageNamed:@"nav_item_game_icon"] forState:UIControlStateNormal];
+    [leftButton setImage:[UIImage imageNamed:@"nav_item_game_click_icon"] forState:UIControlStateHighlighted];
+    [leftButton sizeToFit];
+    // 由于使用button会使得点击范围增大，所以将button放进view中，然后赋值
+    UIView *leftView = [[UIView alloc] initWithFrame:leftButton.bounds];
+    [leftView addSubview:leftButton];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:leftView];
+    
+    // 2.rightBarButtonItem
+    
+    
+    // 3.titleView
+    
+}
+
+- (UIBarButtonItem *)setBarButtonItemWithImage:(UIImage *)image highlightedImage:(UIImage *)highlightedImage 
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

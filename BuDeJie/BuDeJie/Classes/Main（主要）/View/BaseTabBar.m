@@ -37,8 +37,8 @@
     [super layoutSubviews];
     
     NSInteger count = self.items.count + 1;
-    CGFloat btnW = self.bounds.size.width / count;
-    CGFloat bthH = self.bounds.size.height;
+    CGFloat btnW = self.tw_width / count;
+    CGFloat bthH = self.tw_height;
     CGFloat btnX = 0;
     
     NSInteger i = 0;
@@ -54,7 +54,7 @@
         }
     }
     
-    self.plusButton.center = CGPointMake(self.bounds.size.width * 0.5, self.bounds.size.height * 0.5);
+    self.plusButton.center = CGPointMake(self.tw_width * 0.5, self.tw_height * 0.5);
 }
 
 @end
